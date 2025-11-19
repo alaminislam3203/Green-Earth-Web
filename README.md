@@ -4,6 +4,11 @@ A fully responsive, interactive **Plant Shop Application** built with modern Jav
 
 ---
 
+
+🔗 **Live Site:**
+[https://alaminislam3203.github.io/B12A06-Green-Earth/](https://alaminislam3203.github.io/B12A06-Green-Earth/)
+
+
 ## 🚀 Features
 
 ### ✅ **1. Dynamic Categories Loading**
