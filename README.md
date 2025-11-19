@@ -1,41 +1,120 @@
-## 1) var, let, এবং const এর মধ্যে পার্থক্য কী?
+# 🌿 Green Earth Website
 
-- **var** → function-scoped variable।  
-- **let** এবং **const** → block-scoped variable।  
-- **var** এর মান **পুনরায় ঘোষণা (redeclare)** এবং **পুনরায় নির্ধারণ (reassign)** করা যায়।  
-- **let** এর মান পুনরায় নির্ধারণ করা যায়, কিন্তু পুনরায় ঘোষণা করা যায় না।  
-- **const** এর মান না পুনরায় ঘোষণা করা যায়, না পুনরায় নির্ধারণ করা যায়।  
+A fully responsive, interactive **Plant Shop Application** built with modern JavaScript. It includes dynamic category filtering, product listing, modal-based plant details, and a fully functional cart system.
 
 ---
 
-## 2) map(), forEach(), এবং filter() এর মধ্যে পার্থক্য কী?
+## 🚀 Features
 
-- **map()** → প্রতিটি element কে রূপান্তর করে নতুন array রিটার্ন করে। মূল array পরিবর্তন হয় না।  
-- **forEach()** → প্রতিটি element এর জন্য function চালায়, কিন্তু নতুন array তৈরি করে না।  
-- **filter()** → শর্ত মিলে এমন element গুলো নিয়ে নতুন array তৈরি করে। মূল array অপরিবর্তিত থাকে।  
+### ✅ **1. Dynamic Categories Loading**
+
+* Fetches plant categories from API.
+* Highlights active category.
+* Loads plants based on selected category.
+
+### ✅ **2. Plant Listing Section**
+
+* Displays all plants with image, category, price, and description.
+* "Add to Cart" button with real-time cart updates.
+* Clicking on plant name opens detailed modal.
+
+### ✅ **3. Loader Animation**
+
+* Shows loader while fetching API data.
+* Smooth hide/show transition.
+
+### ✅ **4. Plant Detail Modal**
+
+* Detailed plant information (image, price, description).
+* Clean UI with `dialog.showModal()`.
+
+### ✅ **5. Shopping Cart System**
+
+* Add items to cart.
+* If item already exists, quantity increases.
+* Remove items from cart.
+* Auto-updates total price.
+
+### ✅ **6. Clean UI / UX**
+
+* TailwindCSS-based styles.
+* Fully responsive grid.
+* Smooth hover and click animations.
 
 ---
 
-## 3) Arrow Function কী?
+## 📁 Folder Structure Example
 
-ES6 এ **arrow function** হলো anonymous function লেখার একটি সংক্ষিপ্ত উপায়।  
-এটি traditional function expression এর তুলনায় ছোট syntax প্রদান করে।
+```
+📦 plant-shop-app
+ ┣ 📂 assets
+ ┣ 📂 scripts
+ ┃ ┗ 📜 app.js
+ ┣ 📂 styles
+ ┃ ┗ 📜 style.css
+ ┣ 📜 index.html
+ ┣ 📜 README.md
+```
+
+---
+
+## 🔗 API Endpoints Used
+
+| Action                 | Endpoint                                                 |
+| ---------------------- | -------------------------------------------------------- |
+| Get All Categories     | `https://openapi.programming-hero.com/api/categories`    |
+| Get All Plants         | `https://openapi.programming-hero.com/api/plants`        |
+| Get Plants by Category | `https://openapi.programming-hero.com/api/category/{id}` |
+| Get Plant Details      | `https://openapi.programming-hero.com/api/plant/{id}`    |
+
+---
+
+## 🧠 How It Works
+
+### **1. Page Loads**
+
+* Fetches categories.
+* Fetches all plants.
+
+### **2. User Interacts**
+
+* Select category → loads filtered plants.
+* Click plant → opens modal.
+* Add to cart → updates cart list.
+* Remove from cart → recalculates total price.
+
+---
+
+## 🛒 Cart System Logic
+
+* Each cart item has:
+
+  ```js
+  {
+      plantName: "Aloe Vera",
+      plantPrice: 350,
+      quantity: 1
+  }
+  ```
+* If same item is added again → `quantity + 1`
+* Shows total price dynamically.
+
+---
+
+## 📸 UI Preview (Conceptual)
+
+* Sidebar with categories.
+* Main cards grid.
+* Beautiful modals.
+* Sticky cart on right side.
+
+---
 
 
-## 4) Destructuring Assignment কীভাবে কাজ করে?
+---
 
-ES6 এ **destructuring** হলো object এবং array থেকে মান বের করে variable এ assign করার একটি সংক্ষিপ্ত উপায়।  
+## 📌 Author
 
+**MD AL-AMIN ISLAM**
 
-## 5) Template Literals কী?
-
-ES6 এ **template literals** হলো এমন একটি string তৈরি করার পদ্ধতি যেখানে expression embed করা যায়।  
-এটি **backtick (`` ` ``)** দিয়ে লেখা হয়।
-
-### Template Literals vs String Concatenation
-
-1. Template literals এ `${}` এর ভিতরে যেকোনো JS expression ব্যবহার করা যায়।  
-2. Template literals multiline string তৈরি করতে পারে।  
-3. String concatenation এ `+` ব্যবহার করতে হয়, কিন্তু template literals এ লাগে না।  
-4. Template literals কোডকে আরও সহজপাঠ্য (readable) করে।  
-
+Feel free to modify and expand this project! 
